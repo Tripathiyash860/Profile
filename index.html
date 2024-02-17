@@ -4,11 +4,18 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="Author" content="Oluwatobi Akinola Samuel">
-   <meta name="email" content="itoluwatobby@gmail.com">
-   <meta name="Description" content="A personal portfolio webpage that entails my skills, experience, part of the projects I did">
+   
    <title>Portfolio </title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- Bootstrap JS (Optional, if you want to use Bootstrap's JS features) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Font Awesome JS (if you're using Font Awesome for icons) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome CSS (Assuming you're using Font Awesome for icons) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<!-- Custom CSS (if any) -->
    <link rel="stylesheet" href="./style.css">
 </head>
 <style>
@@ -557,29 +564,54 @@ nav .fas{
 ::-webkit-scrollbar{
    width: 0;
 }
+.nav-link
+{
+   color: #ffffff;
+   font-size: 20px;
+}
+.nav-item :hover
+{
+   color: red;
+}
 </style>
 <body>
    <div id="header">
       <div class="container">
-         <nav>
-            <h1 class="title">Portfolio<span></span></h1>
-            <ul id="sideMenu">
-               <li><a href="#">Home</a></li>
-               <li><a href="#about">About</a></li>
-               <li><a href="#services">Services</a></li>
-               <li><a href="#portfolio">Portfolio</a></li>
-               <li><a href="#contact">Contact</a></li>
-               <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-         </nav>
+         <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="color:white; font-size:50px;">Portfolio<span></span></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+                <i class="fas fa-times d-lg-none" onclick="closemenu()"></i>
+              </div>
+            </div>
+          </nav>
          <div class="header-text">
             <p></p>
             <h1>Hi,I'm <span>YASH</span><br/>TRIAPTHI</h1>
          </div>
       </div>
    </div>
-
+   
    <!-- ----------------------------------About------------------------------- -->
 
    <div id="about">
@@ -598,30 +630,30 @@ nav .fas{
                      In conclusion, I am a dedicated and skilled software developer who is passionate about using technology to solve real-world problems. I am always eager to learn and improve my skills, and I believe that my passion and commitment to excellence make me a valuable asset to any team. If you are looking for a developer with a strong work ethic,then I would be an excellent candidate for your team. Thank you for taking the time to go through my profile, and I look forward to hearing from you soon.                  
                    </span> 
                </p>
-
+<!-- 
                <div class="tab-titles">
                   <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
                   <p class="tab-links" onclick="openTab('experience')">Experience</p>
                   <p class="tab-links" onclick="openTab('education')">Education</p>
-               </div>
-               <div class="tab-content active-tab" id="skills">
+               </div> -->
+               <!-- <div class="tab-content active-tab" id="skills">
                   <ul>
                      <li><span>Node</span><br/>Front-end Development</li>
-                     <!-- <li><span>Web Design</span><br/>Web Development</li> -->
+                      <li><span>Web Design</span><br/>Web Development</li> 
                      <li><span>Database</span><br/>No Experience</li>
                      <li><span>Website Developer</span><br/>By Javascript</li>
-                     <!-- <li><span>Java</span><br/>Spring MVC, Spring security and Spring boot</li> -->
+                   <li><span>Java</span><br/>Spring MVC, Spring security and Spring boot</li> 
                   </ul>
-               </div>
-               <!-- <div class="tab-content" id="experience">
+               </div> 
+               <div class="tab-content" id="experience">
                   <ul>
                      <li><span>2022 - Present</span><br/>FreeLance</li>
                      <li><span>2021 - Present</span><br/>Web Development</li>
                      <li><span>2020 - Present</span><br/>working with REST APIs in java and Node</li>
                   </ul>
-               </div> -->
+               </div> 
                <div class="tab-content" id="education">
-                  <!-- <ul>
+                   <ul>
                      <li><span>2021</span><br/>MERN Stack Development</li>
                      <li><span>2019</span><br/>Federal University of Agriculture, Abeokuta</l>
                   </ul> -->
@@ -667,7 +699,7 @@ nav .fas{
             <div class="work">
                <img src="./Screenshot 2024-01-31 180056.png" alt="">
                <div class="layout">
-                  <h3>Jewellery-website</h3>
+                  <h6>Jewellery-website</h6>
                   <p></p>
                   <a href="https://github.com/Tripathiyash860/jewellery-website.git" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                </div>
@@ -675,7 +707,7 @@ nav .fas{
             <div class="work">
                <img src="./Screenshot 2024-01-31 180634.png" alt="">
                <div class="layout">
-                  <h3>Hotel-america</h3>
+                  <h6>Hotel-america</h6>
                   <p></p>
                   <a href="https://tripathiyash860.github.io/Hotel-Website/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                </div>
@@ -683,7 +715,7 @@ nav .fas{
             <div class="work">
                <img src="./Screenshot 2024-01-31 181006.png" alt="">
                <div class="layout">
-                  <h3>Food-website</h3>
+                  <h6>Food-website</h6>
                   <p></p>
                   <a href="https://tripathiyash860.github.io/Food-website/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                </div>
@@ -691,7 +723,7 @@ nav .fas{
             <div class="work">
                <img src="./Screenshot 2024-01-31 181344.png" alt="">
                <div class="layout">
-                  <h3>Hotel-website</h3>
+                  <h6>Hotel-website</h6>
                   <p></p>
                   <a href="https://github.com/Tripathiyash860/hotel-2-website.git" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                </div>
@@ -730,7 +762,7 @@ nav .fas{
                   <a href="#"><i class="fab fa-instagram"></i></a>
                   <a href="#"><i class="fab fa-linkedin"></i></a>
                </div>
-               <a download="./images/images/Oluwatobi Akinola.pdf" class="btn btn-2">Download CV</a>
+               <a class="btn btn-2">Download Resume</a>
             </div>
             <div class="contact-right">
                <form name="submit-to-google-sheet">
